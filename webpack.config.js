@@ -15,6 +15,12 @@ module.exports = {
   resolve: {
     extensions: ['*', '.webpack.js', '.web.js', '.js', '.jsx', '.json']
   },
+  optimization: {
+    splitChunks: {
+      // include all types of chunks
+      chunks: 'all'
+    }
+  },
   module: {
     rules: [
       {
