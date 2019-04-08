@@ -1,0 +1,39 @@
+{
+  "name": "react-skeleton",
+  "version": "1.0.0",
+  "description": "A minimal skeleton for React",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danilosalvati/react-skeleton.git"
+  },
+  "keywords": [
+    "react",
+    "skeleton",
+    "webpack"
+  ],
+  "author": "Danilo Salvati <salvati.danilo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danilosalvati/react-skeleton/issues"
+  },
+  "homepage": "https://github.com/danilosalvati/react-skeleton#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "html-webpack-plugin": "3.2.0",
+    "webpack": "4.29.6",
+    "webpack-cli": "3.3.0",
+    "webpack-dev-server": "3.3.0"
+  },
+  "dependencies": {
+    "react": "16.8.6",
+    "react-dom": "16.8.6"
+  }
+}
