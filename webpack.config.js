@@ -15,7 +15,7 @@ module.exports = env => ({
     filename: '[name].[contenthash].js'
   },
   resolve: {
-    extensions: ['*', '.webpack.js', '.web.js', '.js', '.jsx', '.json']
+    extensions: ['*', '.webpack.js', '.web.js', '.js', '.jsx', '.json', '.ts', '.tsx']
   },
   optimization: {
     splitChunks: {
@@ -26,7 +26,7 @@ module.exports = env => ({
   module: {
     rules: [
       {
-        test: /\.js|jsx$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader'
