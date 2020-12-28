@@ -3,14 +3,16 @@ const HtmlWebPackPlugin = require('html-webpack-plugin')
 
 const htmlWebpackPlugin = new HtmlWebPackPlugin({
   template: './src/index.html',
-  filename: './index.html'
+  filename: './index.html',
+  inject: 'body'
 })
 
-module.exports = {
+module.exports = env => ({
   entry: './src/',
+  mode: env.production ? 'production': 'development',
   output: {
     path: path.resolve('build'),
-    filename: 'bundled.js'
+    filename: '[name].[contenthash].js'
   },
   resolve: {
     extensions: ['*', '.webpack.js', '.web.js', '.js', '.jsx', '.json']
@@ -32,5 +34,9 @@ module.exports = {
       }
     ]
   },
-  plugins: [htmlWebpackPlugin]
-}
+  plugins: [htmlWebpackPlugin],
+  devServer: {
+    port: 8080,
+    inline: true,
+  },
+})
